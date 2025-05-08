@@ -120,7 +120,7 @@ public class TransportGetAlertsAction extends HandledTransportAction<GetAlertsRe
                 public void onResponse(SearchResponse searchResponse) {
                     try {
                         List<Detector> detectors = DetectorUtils.getDetectors(searchResponse, xContentRegistry);
-                        if (detectors.size() == 0) {
+                        /*if (detectors.size() == 0) {
                             actionListener.onFailure(
                                 SecurityAnalyticsException.wrap(
                                     new OpenSearchStatusException(
@@ -129,7 +129,7 @@ public class TransportGetAlertsAction extends HandledTransportAction<GetAlertsRe
                                 )
                             );
                             return;
-                        }
+                        }*/
                         alertsService.getAlerts(
                                 detectors,
                                 request.getLogType(),

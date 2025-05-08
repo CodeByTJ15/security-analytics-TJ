@@ -204,9 +204,9 @@ public class AlertsService {
             Instant endTime,
             ActionListener<GetAlertsResponse> listener
     ) {
-        if (detectors.size() == 0) {
+       /* if (detectors.size() == 0) {
             throw new OpenSearchStatusException("detector list is empty!", RestStatus.NOT_FOUND);
-        }
+        }*/
 
         List<String> allMonitorIds = new ArrayList<>();
         // Used to convert monitorId back to detectorId to store in result FindingDto
